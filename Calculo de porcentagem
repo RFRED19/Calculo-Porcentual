@@ -1,0 +1,42 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package com.mycompany.calculopercentual;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author Adm
+ */
+public class CalculoPercentual {
+
+    public static void main(String[] args) {
+        //System.out.println("Hello World!");
+        //variaveis
+        String nome;
+        double gasto, sobra, calculo1, calculo2, total; 
+        //objetos
+        Scanner teclado = new Scanner (System.in);
+        //entrada
+        System.out.println("Qual é o seu nome");
+        nome = teclado.next();
+        
+        System.out.println("Quantos sobrou? ");
+        sobra = teclado.nextDouble();
+        
+        System.out.println("Qual o percentual Gasto?");
+        gasto = teclado.nextDouble();
+        
+        //operaçoes
+        calculo1 = (sobra*100);
+        calculo2 = (gasto-100);
+        total = (calculo1 / calculo2)*-1;
+        
+        //saida
+        System.out.println(nome);
+        System.out.println("O seu valor inicial  era de: "+ total);
+        
+    }
+}
